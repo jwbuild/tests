@@ -37,12 +37,13 @@ jobs:
       
       # Installs node.js    
       - name: Setup Node.js environment
-          uses: actions/setup-node@v3.5.1
-          with:
+        uses: actions/setup-node@v3.5.1
+        with:
             node-version: 18 # optional
-
-      # Run the application
-      - run: |
+      
+      # Run node app
+      - name: Run the app
+        run: |
           cd node-sample 
           node app.js
       
